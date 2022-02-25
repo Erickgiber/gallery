@@ -3,7 +3,7 @@ const $ = s => {
     return document.querySelector(s)
 }
 const $All = s => {
-    return document.querySelector(s)
+    return document.querySelectorAll(s)
 }
 
 // LocalStorage
