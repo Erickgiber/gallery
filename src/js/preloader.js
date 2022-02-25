@@ -17,13 +17,16 @@ export default Preloader
 
 // Remover preloader function
 const remove_preloader = () => {
-    $('.preloader').style.cssText = `
+    setTimeout(() => {
+        $('.preloader').style.cssText = `
         transform: scale(2);
         opacity: 0;
-    `
-    setTimeout(()=> {
-        $('.preloader').remove()
-    }, 500)
+        `
+        setTimeout(() => {
+            $('.preloader').remove()
+        }, 500)
+    }, 300)
+    
 }
 
 
