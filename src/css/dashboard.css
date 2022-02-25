@@ -173,6 +173,9 @@
     width: 80vw;
     max-width: 400px !important;
   }
+  .images_content {
+    height: auto;
+  }
 }
 
 /* Media query moviles */
