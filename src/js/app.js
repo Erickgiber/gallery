@@ -1,6 +1,7 @@
 import Preloader from './preloader.js'
 import Header from './views/header.js'
 import Searcher from './views/searcher.js'
+import Dashboard from './views/dashboard.js'
 import Footer from './views/footer.js'
 
 const App = ({title}) => {
@@ -8,6 +9,7 @@ const App = ({title}) => {
         ${Preloader()}
         ${Header({title})}
         ${Searcher()}
+        ${Dashboard()}
         ${Footer()}
     `)
 }

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import './header.css';
 @import './searcher.css';
+@import './dashboard.css';
 @import './footer.css';
 @import './preloader.css';
 
