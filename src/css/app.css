@@ -20,6 +20,19 @@
     --inactive_color: #9FB2D4;
 }
 
+::-webkit-scrollbar {
+    width: 8.5px;
+    height: 6px;
+    background: var(--white);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--inactive_color);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--active_color);
+}
+
 /* Reset */
 :where(*, *::before, *::after) {
     margin: 0;
