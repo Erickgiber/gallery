@@ -1,0 +1,78 @@
+.seacher {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+
+    /* Flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title_page {
+    width: 86px;
+    height: 47px;
+    background-color: var(--dark);
+    border-radius: 20px;
+    /* Grid */
+    display: grid;
+    place-items: center;
+}
+
+.title_page h3 {
+    font-size: 23px;
+    color: var(--text_alt);
+    font-family: "Poppins", Ubuntu, Arial;
+}
+
+/* Form Settings */
+#form_searcher {
+    position: relative;
+}
+
+/* Input Styles */
+#input_searcher {
+    width: 166px;
+    height: 47px;
+    background: var(--white);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+    transition: 0.5s;
+    font-family: "Poppins", Ubuntu, Arial;
+    font-weight: bold;
+    color: var(--text);
+}
+#input_searcher:focus {
+    transition: 0.3s;
+    padding-left: 12px;
+}
+
+#input_searcher::placeholder {
+    transition: 0.3s;
+    color: var(--input_placeholder);
+}
+#input_searcher:focus::placeholder {
+    transition: 0.5s;
+    transform: translate(30px, 0);
+    opacity: 0;
+}
+
+
+
+/* Icons Searcher */
+#searcher_icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 25px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--active_color);
+}

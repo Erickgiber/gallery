@@ -1,0 +1,41 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import './header.css';
+@import './searcher.css';
+@import './footer.css';
+@import './preloader.css';
+
+:root {
+    --bg: #f9f9f9;
+    --text: #000;
+    --text_alt: #fff;
+    --white: #fff;
+    --white_2: #ededed;
+    --profile_img: url("../assets/user.png");
+    --dark: #202020;
+    --input_placeholder: #A9A9A9;
+    --active_color: #699bf7;
+    --inactive_color: #9FB2D4;
+}
+
+/* Reset */
+:where(*, *::before, *::after) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:where(body, html) {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#app {
+    background-color: inherit;
+    font-family: inherit;
+}
+
