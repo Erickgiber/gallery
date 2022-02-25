@@ -18,7 +18,7 @@ const load_images = () => {
         e.target.remove()
     }
     
-    for (let i = 10; i < 20; i++) {
+    for (let i = 1; i < 20; i++) {
         const img = document.createElement('img')
         const div = document.createElement('div')
         const bar_options = document.createElement('div')
@@ -113,6 +113,7 @@ const download_image = async (src, id) => {
         const imageBlog = await image.blob()
         const imageURL = URL.createObjectURL(imageBlog)
         info.setAttribute('info', "start_download")
+
         info.innerHTML = `
         <strong">
             Your download has started.
@@ -120,12 +121,13 @@ const download_image = async (src, id) => {
 
         const link = document.createElement('a')
         link.href = imageURL
-        link.download = `Gallery-image`
+        link.download = `${id} Gallery-image`
         link.click()
     }
     catch (err) {
         console.log(err)
         info.setAttribute('info', "error_download")
+        
         info.innerHTML = `
         <strong>
             Error downloading, please try again.
