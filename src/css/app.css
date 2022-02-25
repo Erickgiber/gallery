@@ -23,7 +23,7 @@
 ::-webkit-scrollbar {
     width: 8.5px;
     height: 6px;
-    background: var(--white);
+    background: transparent;
 }
 ::-webkit-scrollbar-thumb {
     background: var(--inactive_color);
