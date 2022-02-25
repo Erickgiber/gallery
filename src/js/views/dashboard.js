@@ -13,7 +13,7 @@ export default Dashboard
 const load_images = () => {
     const main = $('.main_dashboard')
     
-    for (let i = 10; i < 12; i++) {
+    for (let i = 10; i < 18; i++) {
         const img = document.createElement('img')
         const div = document.createElement('div')
         const bar_options = document.createElement('div')
