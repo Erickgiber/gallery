@@ -5,6 +5,7 @@
 @import './searcher.css';
 @import './dashboard.css';
 @import './footer.css';
+@import './list_pages.css';
 @import './preloader.css';
 
 :root {
@@ -51,5 +52,6 @@ body {
 #app {
     background-color: inherit;
     font-family: inherit;
+    padding-bottom: 70px;
 }
 

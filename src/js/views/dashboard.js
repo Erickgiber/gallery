@@ -18,7 +18,7 @@ const load_images = () => {
         e.target.remove()
     }
     
-    for (let i = 1; i < 20; i++) {
+    for (let i = 1; i < 7; i++) {
         const img = document.createElement('img')
         const div = document.createElement('div')
         const bar_options = document.createElement('div')
@@ -61,11 +61,11 @@ const click_image = () => {
             // Constants
             const content = e.target.src
             const div = document.createElement('div')
-            const ghost = document.createElement('div')
             // Div class
             div.classList.add('images_content','image_clicked')
-            ghost.classList.add('ghost')
 
+            const ghost = document.createElement('div')
+            ghost.classList.add('ghost')
             ghost.onclick = (e) => {
                 e.target.remove()
                 div.classList.remove('image_clicked_animation')
@@ -73,7 +73,11 @@ const click_image = () => {
                         div.remove()
                     }, 300);
             }
-
+            /*
+            window.addEventListener('click', (e) => {
+                console.log(e.key)
+            })
+            */
             // Animation to open
             setTimeout(() => {
                 div.classList.add('image_clicked_animation')
@@ -86,7 +90,6 @@ const click_image = () => {
         })
     })
 }
-
 
 // Function click download
 const click_download = () => {
