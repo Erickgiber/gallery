@@ -18,7 +18,7 @@ const load_images = () => {
         e.target.remove()
     }
     
-    for (let i = 1; i < 7; i++) {
+    for (let i = 1; i < 10; i++) {
         const img = document.createElement('img')
         const div = document.createElement('div')
         const bar_options = document.createElement('div')

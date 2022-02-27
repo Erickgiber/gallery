@@ -1,6 +1,6 @@
 const IMG = {
-    logo: './src/assets/logo.png',
-    user: './src/assets/user.png'
+    logo: 'https://i.ibb.co/Hn7MRyb/Gallery.png',
+    user: 'https://i.ibb.co/rQjPVsz/user.png'
 }
 
 export default IMG
