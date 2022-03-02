@@ -2,7 +2,7 @@ import IMG from '../images.js'
 
 const Header = ({title}) => {
     return(`
-        <header class="header_mobile">
+        <header class="header_mobile" data-dark>
             <div class="logo">
                 <img src="${IMG.logo}" alt="LOGO" />
                 <strong> ${title} </strong>

@@ -1,0 +1,25 @@
+ .container_btn_background{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+ 
+} 
+.container_btn_background:hover{
+  width: 42px;
+  height: 42px;
+  background-color: rgb(231, 221, 221);
+}
+.btn_background{
+width:35px;
+margin: auto;
+}
+
+.changeMode{
+	/* color: ; */
+  background-color:#1B2638;
+}
+
