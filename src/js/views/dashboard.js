@@ -63,24 +63,28 @@ const click_image = () => {
         image.addEventListener('click', (e) => {
             // Constants
             const content = e.target.src
+
+            // Elements Created
+            const ghost = document.createElement('div')
             const div = document.createElement('div')
+
             // Div class
             div.classList.add('images_content','image_clicked')
-
-            const ghost = document.createElement('div')
             ghost.classList.add('ghost')
-            ghost.onclick = (e) => {
+
+            // Onclick Delet Ghost
+            ghost.addEventListener('click', (e) => {
+                // Remover Ghost
                 e.target.remove()
+
+                // Remover Imagen
                 div.classList.remove('image_clicked_animation')
                 setTimeout(() => {
-                        div.remove()
-                    }, 300);
-            }
-            /*
-            window.addEventListener('click', (e) => {
-                console.log(e.key)
+                    div.remove()
+                }, 300);
             })
-            */
+
+
             // Animation to open
             setTimeout(() => {
                 div.classList.add('image_clicked_animation')
@@ -152,8 +156,24 @@ const download_image = async (src, id) => {
     }, 50)
 }
 
+const close_img_clicked_keyup = (e) => {
+    if (e.key === "Escape") {
+        if ($('.ghost')) {
+            // Remover Ghost
+            $('.ghost').remove()
+    
+            // Remover Imagen
+            $('.image_clicked').classList.remove('image_clicked_animation')
+            setTimeout(() => {
+                $('.image_clicked').remove()
+            }, 300);
+        }
+    }
+}
+
 
 // Events Listener
 window.addEventListener('load', load_images)
 window.addEventListener('load', click_image)
 window.addEventListener('load', click_download)
+window.addEventListener('keyup', close_img_clicked_keyup)

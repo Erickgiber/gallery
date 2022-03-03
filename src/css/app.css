@@ -21,14 +21,16 @@
 }
 
 ::-webkit-scrollbar {
-    width: 8.5px;
+    width: 9px;
     height: 6px;
     background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--inactive_color);
-    border-radius: 5px;
+    border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--active_color);
 }
@@ -54,3 +56,16 @@ body {
     padding-bottom: 70px;
 }
 
+noscript {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    color: #fff;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: calc(1em + 1vw);
+    user-select: none;
+    transition: 0.8s ease;
+}
