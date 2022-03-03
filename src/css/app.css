@@ -1,12 +1,16 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/* Import others styles */
 @import './header.css';
 @import './searcher.css';
 @import './dashboard.css';
 @import './footer.css';
 @import './preloader.css';
 
+
+/* Variables */
 :root {
     --bg: #f9f9f9;
     --text: #000;
@@ -20,22 +24,21 @@
     --inactive_color: #9FB2D4;
 }
 
+/* Styles for Scroll Bar */
 ::-webkit-scrollbar {
     width: 9px;
     height: 6px;
     background: transparent;
 }
-
 ::-webkit-scrollbar-thumb {
     background: var(--inactive_color);
     border-radius: 3px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: var(--active_color);
 }
 
-/* Reset */
+/* Reset Document (HTML) */
 :where(*, *::before, *::after) {
     margin: 0;
     padding: 0;
@@ -45,17 +48,20 @@
     scroll-behavior: smooth;
 }
 
+/* Styles for Body */
 body {
     background-color: var(--bg);
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* Styles for (Main id="app") */
 #app {
     background-color: inherit;
     font-family: inherit;
     padding-bottom: 70px;
 }
 
+/* Styles when JavaScript is not detected! */
 noscript {
     position: fixed;
     top: 50%;

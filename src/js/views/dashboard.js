@@ -1,8 +1,9 @@
+// Icons imported
 import Icons from '../icons.js'
 
 // Dashboard HTML Principal
 const Dashboard = () => {
-    return(`
+    return (`
         <main class="main_dashboard">
         </main>
     `)
@@ -14,16 +15,16 @@ export default Dashboard
 
 // Function for load images
 const load_images = () => {
-    
-    // Content Main
+    // Constants
     const main = $('.main_dashboard')
 
     // Amount of Images Number
     let i_counter = 1
     let max = i_counter + 10
-    
+
     // For at i Inner "10" Images to App
     for (let i = i_counter; i < max; i++) {
+        // Create Elements
         const img = document.createElement('img')
         const div = document.createElement('div')
         const bar_options = document.createElement('div')
@@ -34,16 +35,18 @@ const load_images = () => {
         bar_options.classList.add('bar_options')
         img.src = `https://picsum.photos/id/${i}/720/1280`
         bar_options.innerHTML = options_of_bar()
-        // Agregar al div
+
+        // Add to "Div Create"
         div.append(img, bar_options)
-        // Agregar al contenedor
+
+        // Add to "Main content"
         main.append(div)
     }
 }
 
 // Bar Options HTML
 const options_of_bar = () => {
-    return(`
+    return (`
         <div favorite="true">
          ${Icons.star}
         </div>
@@ -61,8 +64,12 @@ const options_of_bar = () => {
 
 // Click Image function to open
 const click_image = () => {
+    // Constants
     const images = $All('.images_content img')
+
+    // For Each Image
     images.forEach((image) => {
+
         image.addEventListener('click', (e) => {
             // Constants
             const content = e.target.src
@@ -72,7 +79,7 @@ const click_image = () => {
             const div = document.createElement('div')
 
             // Div class
-            div.classList.add('images_content','image_clicked')
+            div.classList.add('images_content', 'image_clicked')
             ghost.classList.add('ghost')
 
             // Onclick Delet Ghost
@@ -103,14 +110,17 @@ const click_image = () => {
 
 // Function click download
 const click_download = () => {
-    const images = $All('.images_content img')
+    // Constants
     const btn_download = $All('[download="true"]')
 
+    // For Each Download Button
     btn_download.forEach((btn) => {
         btn.addEventListener('click', (e) => {
+            
             // Constants
             const src = e.path[3].childNodes[0].src
             const id = e.path[3].getAttribute('id')
+
             // Download image
             download_image(src, id)
         })
@@ -119,6 +129,7 @@ const click_download = () => {
 
 // Download image from exter server
 const download_image = async (src, id) => {
+    // Create Element
     const info = document.createElement('div')
 
     // Try Download Image
@@ -180,7 +191,7 @@ const close_img_clicked_keyup = (e) => {
         if ($('.ghost')) {
             // Remover Ghost
             $('.ghost').remove()
-    
+
             // Remover Imagen
             $('.image_clicked').classList.remove('image_clicked_animation')
             setTimeout(() => {

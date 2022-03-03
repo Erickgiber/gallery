@@ -1,5 +1,7 @@
+// Icons imported
 import Icon from '../icons.js'
 
+// Searcher HTML Principal
 const Searcher = () => {
     return(`
         <div class="seacher">
@@ -17,17 +19,20 @@ const Searcher = () => {
     `)
 }
 
+// Export Default to Searcher Function
 export default Searcher
 
-// Form Submit
+
+// Form Submit Function
 const form_submit = () => {
+    // Constants
     const form = $('#form_searcher')
-    // Event
+
+    // Event at submit
     form.addEventListener('submit', (e) => {
         e.preventDefault()
     })
 }
-
 
 // Events Listener
 window.addEventListener('load', form_submit)

@@ -1,5 +1,7 @@
+// IMG imported
 import IMG from '../images.js'
 
+// Header HTML Principal
 const Header = ({title}) => {
     return(`
         <header class="header_mobile">
@@ -16,4 +18,5 @@ const Header = ({title}) => {
     `)
 }
 
+// Export Default to Header Function
 export default Header

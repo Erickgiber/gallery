@@ -1,5 +1,7 @@
+// Icons imported
 import Icons from '../icons.js'
 
+// Footer HTML Principal
 const Footer = () => {
     return(`
         <footer class="footer_mobile">
@@ -11,4 +13,5 @@ const Footer = () => {
     `)
 }
 
+// Export Default to Footer Function
 export default Footer
