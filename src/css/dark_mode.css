@@ -19,7 +19,13 @@ margin: auto;
 }
 
 .changeMode{
-	/* color: ; */
+
   background-color:#1B2638;
 }
 
+
+
+.header_mobile.changeMode{
+  box-shadow: 0 1px 5px #325285;
+  border-bottom: 1px solid #325285;
+}

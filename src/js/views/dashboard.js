@@ -13,12 +13,12 @@ export default Dashboard
 // Function for load images
 const load_images = () => {
     const main = $('.main_dashboard')
-
+    
     const click_image = (e) => {
         e.target.remove()
     }
-    
-    for (let i = 1; i < 20; i++) {
+    let i;
+    for ( i=1 ; i <22; i++) {
         const img = document.createElement('img')
         const div = document.createElement('div')
         const bar_options = document.createElement('div')
