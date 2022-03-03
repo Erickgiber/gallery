@@ -17,8 +17,11 @@ const load_images = () => {
     const click_image = (e) => {
         e.target.remove()
     }
+
+    const i_counter = 1
+    const max = i_counter + 20
     
-    for (let i = 1; i < 10; i++) {
+    for (let i = i_counter; i < max; i++) {
         const img = document.createElement('img')
         const div = document.createElement('div')
         const bar_options = document.createElement('div')
