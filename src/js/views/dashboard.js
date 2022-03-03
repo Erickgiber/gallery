@@ -29,11 +29,18 @@ const load_images = () => {
         const div = document.createElement('div')
         const bar_options = document.createElement('div')
 
-        // div.setAttribute('onclick', 'click_image(this)')
-        div.classList.add('images_content')
+        // Add Attributes
         div.setAttribute('id', i)
+        div.setAttribute('tabindex', i)
+        
+        // Add Class
+        div.classList.add('images_content')
         bar_options.classList.add('bar_options')
+
+        // Add Source for the "Image Created"
         img.src = `https://picsum.photos/id/${i}/720/1280`
+        
+        // Add HTML for bar_options
         bar_options.innerHTML = options_of_bar()
 
         // Add to "Div Create"
