@@ -84,7 +84,6 @@ const click_image = () => {
                 }, 300);
             })
 
-
             // Animation to open
             setTimeout(() => {
                 div.classList.add('image_clicked_animation')
