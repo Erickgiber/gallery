@@ -1,3 +1,4 @@
+// Dashboard HTML Principal
 const Preloader = () => {
     return(`
         <div class="preloader">
@@ -13,9 +14,10 @@ const Preloader = () => {
     `)
 }
 
+// Export Default to Dashboard Function
 export default Preloader
 
-// Remover preloader function
+// Remove Preloader Function
 const remove_preloader = () => {
     setTimeout(() => {
         $('.preloader').style.cssText = `
@@ -28,7 +30,6 @@ const remove_preloader = () => {
     }, 300)
     
 }
-
 
 // Events Listener
 window.addEventListener('load', remove_preloader)

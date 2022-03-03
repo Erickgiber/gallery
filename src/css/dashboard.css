@@ -20,6 +20,7 @@
   transition: 0.2s;
   border-radius: 20px;
   outline-color: var(--active_color);
+  cursor: pointer;
 
   /* Flex */
   display: flex;
