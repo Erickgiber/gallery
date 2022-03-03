@@ -1,5 +1,6 @@
 import Icons from '../icons.js'
 
+// Dashboard HTML Principal
 const Dashboard = () => {
     return(`
         <main class="main_dashboard">
@@ -7,20 +8,21 @@ const Dashboard = () => {
     `)
 }
 
+// Export Default to Dashboard Function
 export default Dashboard
 
 
 // Function for load images
 const load_images = () => {
+    
+    // Content Main
     const main = $('.main_dashboard')
 
-    const click_image = (e) => {
-        e.target.remove()
-    }
-
-    const i_counter = 1
-    const max = i_counter + 20
+    // Amount of Images Number
+    let i_counter = 1
+    let max = i_counter + 10
     
+    // For at i Inner "10" Images to App
     for (let i = i_counter; i < max; i++) {
         const img = document.createElement('img')
         const div = document.createElement('div')
@@ -57,6 +59,7 @@ const options_of_bar = () => {
 }
 
 
+// Click Image function to open
 const click_image = () => {
     const images = $All('.images_content img')
     images.forEach((image) => {
@@ -74,10 +77,10 @@ const click_image = () => {
 
             // Onclick Delet Ghost
             ghost.addEventListener('click', (e) => {
-                // Remover Ghost
+                // Remove Ghost
                 e.target.remove()
 
-                // Remover Imagen
+                // Remove Imagen
                 div.classList.remove('image_clicked_animation')
                 setTimeout(() => {
                     div.remove()
@@ -89,9 +92,10 @@ const click_image = () => {
                 div.classList.add('image_clicked_animation')
             }, 1)
 
-            // Add to App
+            // HTML for "DIV CREATED"
             div.innerHTML = `<img src="${content}" alt="Image" />`
-            console.log(content)
+
+            // Add to App
             $('#app').append(div, ghost)
         })
     })
@@ -117,44 +121,60 @@ const click_download = () => {
 const download_image = async (src, id) => {
     const info = document.createElement('div')
 
+    // Try Download Image
     try {
+        // Constants
         const image = await fetch(src)
         const imageBlog = await image.blob()
         const imageURL = URL.createObjectURL(imageBlog)
+
+        // Add Attribute to "Info Created"
         info.setAttribute('info', "start_download")
 
+        // HTML for "Info Created"
         info.innerHTML = `
         <strong">
             Your download has started.
         </strong>`
 
+        // Creat Link and download Image
         const link = document.createElement('a')
         link.href = imageURL
         link.download = `${id} Gallery-image`
         link.click()
     }
+
+    // If exist any Error
     catch (err) {
+        // Error to console
         console.log(err)
+
+        // Add Attribute to "Info Created"
         info.setAttribute('info', "error_download")
-        
+
+        // HTML for "Info Created"
         info.innerHTML = `
         <strong>
             Error downloading, please try again.
         </strong>`
     }
+
+    // Add to App
     $('#app').append(info)
 
+    // Animation to View Info
     setTimeout(() => {
         info.classList.add('animation_info')
         setTimeout(() => {
             info.classList.remove('animation_info')
-                setTimeout(() => {
-                    info.remove()
-                }, 300)
+            setTimeout(() => {
+                info.remove()
+            }, 300)
         }, 2500)
     }, 50)
 }
 
+// Touch Escape Button on Keyboard
 const close_img_clicked_keyup = (e) => {
     if (e.key === "Escape") {
         if ($('.ghost')) {
